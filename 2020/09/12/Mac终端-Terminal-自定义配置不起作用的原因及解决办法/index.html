@@ -16,7 +16,7 @@
 <meta property="og:description" content="Mac终端(Terminal)自定义配置不起作用的原因及解决办法单色的终端(terminal)不好看, 但又不想用其它的替代,因为安装东西越多,总是会给系统增加负担的.况且我的要求也不高,毕竟终端只是在必要的情况下才会使用,一般总是会用其它的应用的,只是要求模仿Linux的终端分色即可. 按照网上搜索来的,都是修改(或者自己建立)家目录(最简单的办法,就是在终端下, 敲命令 cd 即可到达你的当前">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-12T07:46:27.000Z">
-<meta property="article:modified_time" content="2020-09-12T07:52:01.000Z">
+<meta property="article:modified_time" content="2020-09-12T07:56:02.000Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -180,8 +180,8 @@
 <p><code>source .bash_profile</code></p>
 <p>实际上,我们的配置文件不起作用的原因,是因为我们的终端shell目前是 zsh, 而不是我们以为的 bash, 见下图.  zsh调用的不是 .bash_profile, 而是 .zshrc. 只要将所需的配置内容添加在 .zshrc 文件中即可. 可能你的家目录下,没有这个文件,只要自己创建一个即可.</p>
 <p>分享一下我的极简配置</p>
-<p>`<br># filename: .zshrc<br># 终端 zsh 的配置文件<br>#export LS_OPTIOND=’–color=auto’  #如果没有指定,则自动选择颜色<br>export CLICOLOR=’Yes’  #是否输出颜色<br>export LSCOLORS=’ExGxFxdaCxDaDahbadaces’  # 指定颜色，Linux配色方案<br>export PS1=”%n@%m %1~ %# “<br>export TERM=xterm-256color<br>export GREP_OPTIONS=’–color=always’ GREP_COLOR=’1;35’</p>
-<p>alias ll=’ls -alF’<br>`</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># filename: .zshrc</span><br><span class="line"># 终端 zsh 的配置文件</span><br><span class="line">#export LS_OPTIOND&#x3D;&#39;--color&#x3D;auto&#39;  #如果没有指定,则自动选择颜色</span><br><span class="line">export CLICOLOR&#x3D;&#39;Yes&#39;  #是否输出颜色</span><br><span class="line">export LSCOLORS&#x3D;&#39;ExGxFxdaCxDaDahbadaces&#39;  # 指定颜色，Linux配色方案 </span><br><span class="line">export PS1&#x3D;&quot;%n@%m %1~ %# &quot;</span><br><span class="line">export TERM&#x3D;xterm-256color</span><br><span class="line">export GREP_OPTIONS&#x3D;&#39;--color&#x3D;always&#39; GREP_COLOR&#x3D;&#39;1;35&#39;</span><br><span class="line"></span><br><span class="line">alias ll&#x3D;&#39;ls -alF&#39;</span><br></pre></td></tr></table></figure>
+
 <p>需要其它的配置,请执行搜索</p>
 
       
@@ -275,6 +275,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/09/12/C-C-notes-07-Linux%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          C_C++_notes_07_Linux系统编程
+        
+      </div>
+    </a>
   
   
     <a href="/2020/09/12/First-post/" id="article-nav-older" class="article-nav-link-wrap">
